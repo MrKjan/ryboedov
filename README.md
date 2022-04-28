@@ -15,3 +15,6 @@ I took the first two most expensive items regardless of this (in order of output
 
 # Run robot tests
 robot -P .\ .\tests\test_ryboedov.robot
+
+# Coding
+See file .\coding.py

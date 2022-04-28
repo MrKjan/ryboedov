@@ -9,7 +9,7 @@ Suite teardown  Close All Browsers
 ${Price filter xpath}       //ul[contains(@class, 'sort-by-options')]//a[contains(text(), 'Цене')]
 ${Fish category xpath}      //span[contains(text(), 'Рыба')]
 ${Buy button xpath}         //*[contains(@class,"catalog-items")]//*[contains(@class, "catalog-item")]/*[contains(@class,"catalog-item-price-and-buy")]//a[@data-action="add-to-basket"]
-${Item name xpath poxtfix}  /parent::*/parent::*/parent::*/*[contains(@class,"catalog-item-title")]//a
+${Item name xpath postfix}  /parent::*/parent::*/parent::*/*[contains(@class,"catalog-item-title")]//a
 ${Close popup xpath}        //*[contains(@class,"fancybox-close")]
 
 *** Test Cases ***
@@ -45,7 +45,7 @@ Add to cart
     [Arguments]     ${sequence number}
     Wait Until Page Contains Element    xpath=${Buy button xpath}
     ${Buy button}=  Get WebElement      xpath=(${Buy button xpath})[${sequence number}]
-    ${Item name}  Get Text  (${Buy button xpath}${Item name xpath poxtfix})[${sequence number}]
+    ${Item name}  Get Text  (${Buy button xpath}${Item name xpath postfix})[${sequence number}]
     Log To Console   Buying: ${Item name}
     Click Element    ${Buy button}
     Wait Until Page Contains Element    xpath=${Close popup xpath}
