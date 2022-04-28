@@ -23,8 +23,7 @@ class CatalogPageLocators:
     )
     ACTIVE_BUY_BUTTON = (
         By.CSS_SELECTOR,
-        '.catalog-items .catalog-item>.catalog-item-price-and-buy '
-        'a[data-action="add-to-basket"]'
+        '.catalog-items .catalog-item>.catalog-item-price-and-buy a[data-action="add-to-basket"]'
     )
     ADD_TO_CART_POPUP_TEXT = (
         By.CSS_SELECTOR,

@@ -6,7 +6,12 @@ Use “Robot Framework” as test automation framework to automate test without 
 
 Provide code from implementation.
 
-# Result
+# Result (in python + selenium)
 Before run, you have to set CHROME_PATH from vars.py to chromedriver path
+
+# Note
 For reasons beyond my control, the site sorts by price incorrectly.
 I took the first two most expensive items regardless of this (in order of output)
+
+# Run robot tests
+robot -P .\ .\tests\test_ryboedov.robot

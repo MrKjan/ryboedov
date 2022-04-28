@@ -5,15 +5,18 @@ from selenium.webdriver.remote import webelement
 
 from pages.base_page import BasePage
 from pages.locators import CatalogPageLocators
+from robot.api.deco import keyword, library
 from vars import HOME_LINK
 
 LINK = HOME_LINK + '/catalog/'
 
 
+@library
 class CatalogPage(BasePage):
     def __init__(self, driver: webdriver, url: str) -> None:
         super().__init__(driver, url)
 
+    @keyword
     def filter_by_descending(self, name: str) -> None:
         assert (price_filter := self.__get_price_filter_by_name(name=name)),\
             f'Невозможно фильтровать по {name=}'
@@ -60,7 +63,6 @@ class CatalogPage(BasePage):
         )
         assert len(buttons) >= number,\
             f'Доступных для покупки элементов меньше, чем {number=}'
-        print(f'{buttons[number].text=}')
         buttons[number].click()
         self.close_add_to_cart_popup()
 

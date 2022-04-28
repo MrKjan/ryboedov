@@ -5,7 +5,7 @@ from vars import HOME_LINK
 
 def test_buy_two_items(
     setup
-):
+) -> None:
     driver = setup
     main_page = MainPage(driver, HOME_LINK)
     main_page.open()
