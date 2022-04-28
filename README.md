@@ -9,12 +9,16 @@ Provide code from implementation.
 # Result (in python + selenium)
 Before run, you have to set CHROME_PATH from vars.py to chromedriver path
 
-# Note
+### Note
 For reasons beyond my control, the site sorts by price incorrectly.
 I took the first two most expensive items regardless of this (in order of output)
 
-# Run robot tests
+### Run robot tests
 robot -P .\ .\tests\test_ryboedov.robot
 
 # Coding
 See file .\coding.py
+
+### Note
+I assume that for each number exactly one word should be given
+
